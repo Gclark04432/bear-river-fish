@@ -17,4 +17,8 @@ class Bear
     river.fish_population.shift()
   end
 
+  def roar()
+    return "Roar!!"
+  end
+
 end
