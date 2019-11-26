@@ -29,6 +29,7 @@ class TestRiver < Minitest::Test
   def test_will_river_give_fish_to_hungry_bear
     @river.feed_bear_if_hungry(@bear)
     assert_equal(1, @bear.food_count)
+    assert_equal(2, @river.fish_count())
   end
 
   def test_will_river_refuse_to_give_fish_to_bear_not_hungry
@@ -36,6 +37,7 @@ class TestRiver < Minitest::Test
     bear.stomach.push("Nemo", "Dory")
     @river.feed_bear_if_hungry(bear)
     assert_equal(2, bear.food_count)
+    assert_equal(3, @river.fish_count())
   end
 
 end
