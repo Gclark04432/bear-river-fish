@@ -16,9 +16,11 @@ attr_accessor :fish_population
     bear.food_count() == 0
   end
 
-  def feed_bear(bear)
-    bear.stomach.push(@fish_population[0])
-    @fish_population.shift()
+  def feed_bear_if_hungry(bear)
+    if is_bear_hungry(bear)
+      bear.stomach.push(@fish_population[0])
+      @fish_population.shift()
+    end
   end
 
 end
