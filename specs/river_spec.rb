@@ -9,7 +9,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 class TestRiver < Minitest::Test
 
   def setup
-    @river = River.new("Amazon", [@fish, @fish, @fish] )
+    @river = River.new("Amazon", [@fish, @fish, @fish])
     @fish = Fish.new("Freddy")
   end
 
